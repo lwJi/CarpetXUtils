@@ -1,0 +1,7 @@
+# Configuration definition for thorn CXUtils
+
+REQUIRES Loop
+
+PROVIDES CXUtils
+{
+}
