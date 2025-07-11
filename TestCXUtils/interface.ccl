@@ -1,0 +1,52 @@
+# Interface definition for thorn TestCXUtils
+IMPLEMENTS: TestCXUtils
+
+INHERITS: CarpetXRegrid
+
+USES INCLUDE HEADER: defs.hxx
+USES INCLUDE HEADER: loop_device.hxx
+
+USES INCLUDE HEADER: cx_utils.hxx
+USES INCLUDE HEADER: cx_derivsGF3D5.hxx
+USES INCLUDE HEADER: cx_derivsinline.hxx
+USES INCLUDE HEADER: cx_dissinline.hxx
+USES INCLUDE HEADER: cx_powerinline.hxx
+
+
+
+
+CCTK_REAL chi TYPE=gf CENTERING={VVV} "Test grid function"
+
+CCTK_REAL dchi TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"'
+{
+  dxchi dychi dzchi
+} "1st derivs of test grid function"
+
+CCTK_REAL ddchi TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"'
+{
+  dxxchi dxychi dxzchi dyychi dyzchi dzzchi
+} "2nd derivs of test grid function"
+
+CCTK_REAL chi_diss TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"' "dissipation term"
+
+CCTK_REAL beta TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"'
+{
+  betax, betay, betaz
+} "velocity function used for calculating upwind term"
+
+CCTK_REAL chi_upwind TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"' "upwind term"
+
+CCTK_REAL dchi_error TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"'
+{
+  dxchi_error dychi_error dzchi_error
+} "error of 1st derivs of test grid function"
+
+CCTK_REAL ddchi_error TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"'
+{
+  dxxchi_error dxychi_error dxzchi_error dyychi_error dyzchi_error dzzchi_error
+} "error of 2nd derivs of test grid function"
+
+CCTK_REAL chi_diss_error TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"' "error in dissipation term"
+
+CCTK_REAL chi_upwind_error TYPE=gf CENTERING={VVV} TAGS='checkpoint="no"' "error in upwind term"
+

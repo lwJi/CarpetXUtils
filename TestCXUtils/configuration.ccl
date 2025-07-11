@@ -1,0 +1,3 @@
+# Configuration definitions for thorn TestCXUtils
+
+REQUIRES Loop CXUtils
