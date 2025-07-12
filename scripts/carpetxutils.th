@@ -168,3 +168,4 @@ CarpetX/TmunuBaseX
 !TYPE     = ignore
 !CHECKOUT =
 CarpetXUtils/CXUtils
+CarpetXUtils/TestCXUtils
