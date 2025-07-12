@@ -5,8 +5,6 @@ IMPLEMENTS: CXUtils
 USES INCLUDE HEADER: loop_device.hxx
 
 INCLUDES HEADER: utils.hxx IN cx_utils.hxx
-INCLUDES HEADER: derivs1st.hxx IN cx_derivs1st.hxx
-INCLUDES HEADER: derivs2nd.hxx IN cx_derivs2nd.hxx
 INCLUDES HEADER: derivsGF3D5.hxx IN cx_derivsGF3D5.hxx
 INCLUDES HEADER: derivsinline.hxx IN cx_derivsinline.hxx
 INCLUDES HEADER: dissinline.hxx IN cx_dissinline.hxx
